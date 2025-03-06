@@ -1,0 +1,46 @@
+export const metadata = {
+  title: {
+    default: "Vijay Kushwaha | ML Engineer & SDE Portfolio",
+    template: "%s | Vijay Kushwaha",
+  },
+  description: "Portfolio website of Vijay Kushwaha, showcasing skills in Machine Learning and Software Development.",
+  keywords: [
+    "Machine Learning",
+    "Software Development",
+    "Python",
+    "JavaScript",
+    "React",
+    "TensorFlow",
+    "PyTorch",
+    "Computer Vision",
+    "NLP",
+    "Full Stack Development",
+  ],
+  authors: [{ name: "Vijay Kushwaha" }],
+  creator: "Vijay Kushwaha",
+  openGraph: {
+    type: "website",
+    locale: "en_US",
+    url: "https://vijaykushwaha.com",
+    title: "Vijay Kushwaha | ML Engineer & SDE Portfolio",
+    description: "Portfolio website of Vijay Kushwaha, showcasing skills in Machine Learning and Software Development.",
+    siteName: "Vijay Kushwaha Portfolio",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Vijay Kushwaha | ML Engineer & SDE Portfolio",
+    description: "Portfolio website of Vijay Kushwaha, showcasing skills in Machine Learning and Software Development.",
+    creator: "@vijaykushwaha",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
+}
