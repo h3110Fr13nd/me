@@ -1,0 +1,88 @@
+.button-container {
+    width: 100%;
+    height: 100vh;
+    background-color: #4a4a5a; /* Dark gray background from the image */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    perspective: 1000px; /* Adds depth for 3D effect */
+  }
+  
+  .glowing-button {
+    position: relative;
+    width: 220px; /* Slightly wider to match the image */
+    height: 70px; /* Taller for 3D depth */
+    background: linear-gradient(
+      to top,
+      #4a007d 0%, /* Dark purple at the bottom */
+      #6b2ab2 50%, /* Mid-tone purple */
+      #8a2be2 100% /* Lighter purple at the top */
+    );
+    border-radius: 35px; /* More rounded for the capsule shape */
+    border: none;
+    cursor: pointer;
+    box-shadow:
+      0 0 15px rgba(138, 43, 226, 0.6), /* Outer glow */
+      0 0 30px rgba(106, 42, 178, 0.4), /* Softer glow */
+      0 10px 20px rgba(0, 0, 0, 0.5); /* Shadow beneath for grounding */
+    transition: all 0.3s ease;
+  }
+  
+  /* Glassy overlay effect */
+  .glowing-button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+      to top,
+      rgba(255, 255, 255, 0.1), /* Subtle white highlight for glass effect */
+      rgba(255, 255, 255, 0.3) 50%,
+      transparent 100%
+    );
+    border-radius: 35px;
+    box-shadow:
+      inset 0 0 10px rgba(74, 0, 125, 0.8), /* Inner shadow for depth */
+      inset 0 2px 5px rgba(255, 255, 255, 0.2); /* Highlight for glassiness */
+    pointer-events: none;
+  }
+  
+  /* 3D depth with a bottom layer */
+
+  
+  /* Text styling */
+  .button-text {
+    font-family: 'Arial', sans-serif;
+    font-size: 24px;
+    font-weight: bold;
+    color: #ffffff;
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.5); /* Subtle text glow */
+    position: relative;
+    z-index: 1;
+  }
+  
+  /* Hover effect */
+  .glowing-button:hover {
+    background: linear-gradient(
+      to top,
+      #5a008d 0%, /* Slightly brighter gradient on hover */
+      #7b3ac2 50%,
+      #9a3bf2 100%
+    );
+    box-shadow:
+      0 0 25px rgba(138, 43, 226, 0.8), /* Stronger glow */
+      0 0 50px rgba(106, 42, 178, 0.6),
+      0 10px 20px rgba(0, 0, 0, 0.6);
+    transform: translateY(-3px); /* Lift effect */
+  }
+  
+  /* Focus state for accessibility */
+  .glowing-button:focus {
+    outline: none;
+    box-shadow:
+      0 0 25px rgba(138, 43, 226, 0.8),
+      0 0 50px rgba(106, 42, 178, 0.6),
+      0 10px 20px rgba(0, 0, 0, 0.6);
+  }
