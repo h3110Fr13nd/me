@@ -1,10 +1,9 @@
-import * as React from "react"
-
-import { cn } from "@/lib/utils"
+import * as React from "react";
+import { cn } from "@/lib/utils";
 
 const Card = ({ children, className }) => {
   return (
-    <div className={`glass-effect border-glow hover-lift rounded-lg p-6 ${className}`}>
+    <div className={`vibrant-border glow-effect rounded-lg p-6 ${className}`}>
       {children}
     </div>
   );
@@ -16,8 +15,8 @@ const CardHeader = React.forwardRef(({ className, ...props }, ref) => (
     className={cn("flex flex-col space-y-1.5 p-6", className)}
     {...props}
   />
-))
-CardHeader.displayName = "CardHeader"
+));
+CardHeader.displayName = "CardHeader";
 
 const CardTitle = React.forwardRef(({ className, ...props }, ref) => (
   <h3
@@ -25,8 +24,8 @@ const CardTitle = React.forwardRef(({ className, ...props }, ref) => (
     className={cn("font-semibold leading-none tracking-tight", className)}
     {...props}
   />
-))
-CardTitle.displayName = "CardTitle"
+));
+CardTitle.displayName = "CardTitle";
 
 const CardDescription = React.forwardRef(({ className, ...props }, ref) => (
   <p
@@ -34,13 +33,13 @@ const CardDescription = React.forwardRef(({ className, ...props }, ref) => (
     className={cn("text-sm text-muted-foreground", className)}
     {...props}
   />
-))
-CardDescription.displayName = "CardDescription"
+));
+CardDescription.displayName = "CardDescription";
 
 const CardContent = React.forwardRef(({ className, ...props }, ref) => (
   <div ref={ref} className={cn("p-6 pt-0", className)} {...props} />
-))
-CardContent.displayName = "CardContent"
+));
+CardContent.displayName = "CardContent";
 
 const CardFooter = React.forwardRef(({ className, ...props }, ref) => (
   <div
@@ -48,8 +47,8 @@ const CardFooter = React.forwardRef(({ className, ...props }, ref) => (
     className={cn("flex items-center p-6 pt-0", className)}
     {...props}
   />
-))
-CardFooter.displayName = "CardFooter"
+));
+CardFooter.displayName = "CardFooter";
 
-export { CardHeader, CardFooter, CardTitle, CardDescription, CardContent }
+export { CardHeader, CardFooter, CardTitle, CardDescription, CardContent };
 export default Card;

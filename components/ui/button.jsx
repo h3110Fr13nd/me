@@ -11,10 +11,10 @@ const buttonVariants = cva(
   {
     variants: {
       variant: {
-        default: "glass-effect border-glow text-primary-foreground hover:bg-primary/5",
-        destructive: "glass-effect border-glow text-destructive-foreground hover:bg-destructive/5",
-        outline: "glass-effect border-glow hover:bg-accent/5",
-        secondary: "glass-effect border-glow text-secondary-foreground hover:bg-secondary/5",
+        default: "vibrant-border glow-effect text-primary-foreground hover:bg-primary/5",
+        destructive: "vibrant-border glow-effect text-destructive-foreground hover:bg-destructive/5",
+        outline: "vibrant-border glow-effect hover:bg-accent/5",
+        secondary: "vibrant-border glow-effect text-secondary-foreground hover:bg-secondary/5",
         ghost: "hover:bg-accent/5",
         link: "text-primary underline-offset-4 hover:underline",
       },
